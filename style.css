@@ -1,0 +1,1154 @@
+            @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            /* Global Styling */
+            /* Global Styles */
+            
+            body {
+                background: black;
+                margin: 0;
+                padding: 0;
+                font-family: "Poppins", sans-serif;
+            }
+            
+            a {
+                color: #fff;
+                text-decoration: none;
+            }
+            /* Navbar Styling */
+            
+            .navbar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                padding: 20px 10%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background: black;
+                z-index: 100;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+                font-family: 'Arial', sans-serif;
+            }
+            
+            .logo {
+                font-family: "Poppins", serif;
+                color: rgb(234, 255, 48);
+                font-size: 1.8rem;
+                font-weight: bold;
+            }
+            
+            .navbar ul {
+                display: flex;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                gap: 1.5rem;
+                transition: 0.3s ease;
+            }
+            
+            .navbar ul li {
+                list-style: none;
+            }
+            
+            .navbar ul li a {
+                font-size: 1.2rem;
+                font-weight: 500;
+                text-transform: uppercase;
+                color: aqua;
+                position: relative;
+            }
+            
+            .navbar ul li a:hover,
+            .navbar ul li:active a {
+                color: green;
+            }
+            /* Menu Icon */
+            
+            .menu-icon {
+                display: none;
+                flex-direction: column;
+                gap: 5px;
+                cursor: pointer;
+            }
+            
+            .menu-icon div {
+                width: 25px;
+                height: 5px;
+                background-color: #f4fa3d;
+                transition: 0.3s ease;
+            }
+            /* Mobile Navbar Toggle */
+            
+            .navbar ul.active {
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                top: 70px;
+                right: 0;
+                background: rgba(0, 0, 0, 0.95);
+                width: 100%;
+                padding: 20px 0;
+                text-align: center;
+                gap: 20px;
+                transform: translateX(100%);
+                animation: slideIn 0.5s forwards;
+            }
+            
+            @keyframes slideIn {
+                from {
+                    transform: translateX(100%);
+                }
+                to {
+                    transform: translateX(0);
+                }
+            }
+            /* Responsive Design */
+            
+            @media (max-width: 768px) {
+                .navbar ul {
+                    display: none;
+                }
+                .menu-icon {
+                    display: flex;
+                }
+                .navbar ul.active {
+                    display: flex;
+                }
+            }
+            /* Home Section */
+            
+            section {
+                min-height: 100vh;
+                padding: 10rem 5%;
+            }
+            
+            .home {
+                display: flex;
+                align-items: center;
+                height: 100vh;
+                padding: 60px 9% 0;
+                color: #fff;
+            }
+            /* Typing Animation */
+            
+            .home-info h3 {
+                font-size: 30px;
+                text-transform: none;
+                color: rgb(23, 245, 245);
+                font-family: "Poppins", serif;
+                overflow: hidden;
+                white-space: nowrap;
+                border-right: 2px solid rgb(23, 245, 245);
+                width: 0;
+                animation: typing 5s steps(30) infinite, blink-caret 0.65s step-end infinite;
+            }
+            
+            @keyframes typing {
+                0% {
+                    width: 0;
+                }
+                100% {
+                    width: 100%;
+                }
+            }
+            
+            @keyframes blink-caret {
+                0%,
+                50%,
+                100% {
+                    border-color: transparent;
+                }
+                25%,
+                75% {
+                    border-color: rgb(23, 245, 245);
+                }
+            }
+            /* Adjustments for Mobile */
+            
+            @media (max-width: 768px) {
+                .navbar {
+                    padding: 15px 5%;
+                }
+                .logo {
+                    font-size: 1.5rem;
+                }
+                .navbar ul {
+                    display: none;
+                    flex-direction: column;
+                    text-align: center;
+                    gap: 1rem;
+                }
+                .navbar ul li a {
+                    font-size: 1.1rem;
+                }
+                .menu-icon {
+                    display: flex;
+                }
+                section {
+                    padding: 5rem 5%;
+                }
+                .home-info h3 {
+                    font-size: 24px;
+                }
+            }
+            
+            @keyframes blink-caret {
+                0%,
+                50%,
+                100% {
+                    border-color: transparent;
+                }
+                25%,
+                75% {
+                    border-color: rgb(23, 245, 245);
+                    /* Color of the cursor */
+                }
+            }
+            
+            .home-info h2 {
+                font-size: 20px;
+                text-transform: none;
+                /* margin: 4rem;
+    use only margin rem*/
+                color: rgb(178, 210, 18);
+                font-weight: 500;
+                font-family: 'Arial', sans-serif;
+            }
+            
+            .home-info h4 {
+                font-size: 30px;
+                margin-top: 10px;
+                text-transform: none;
+                /* margin: 4rem;
+    use only margin rem*/
+                color: yellow;
+                font-family: "Poppins", serif;
+            }
+            
+            .home-info p {
+                font-size: 16px;
+                margin: -9px 0 25px;
+                margin-top: 10px;
+                ;
+            }
+            
+            .home-info .btn-sci {
+                display: flex;
+                align-items: center;
+            }
+            
+            .btn {
+                display: inline-bock;
+                padding: 10px 30px;
+                background: rgb(3, 238, 251);
+                border: 2px solid rgb(17, 248, 248);
+                border-radius: 40px;
+                box-shadow: 0 0 10px rgb(247, 245, 244);
+                font-size: 16px;
+                color: black;
+                font-weight: 600;
+                margin-right: 20px;
+            }
+            
+            .btn:hover {
+                background: transparent;
+                color: green;
+            }
+            
+            .ctn {
+                display: inline-bock;
+                padding: 10px 30px;
+                background: rgb(5, 254, 191);
+                border: 2px solid rgb(7, 240, 201);
+                border-radius: 40px;
+                box-shadow: 0 0 10px rgb(247, 249, 247);
+                font-size: 16px;
+                color: rgb(21, 20, 20);
+                font-weight: 600;
+            }
+            
+            .ctn:hover {
+                background: transparent;
+                color: green;
+            }
+            
+            .home-info .btn-sci .sci {
+                margin-left: 20px;
+            }
+            
+            .home-info .btn-sci .sci a {
+                display: inline-flex;
+                padding: 8px;
+                border: 1px solid rgb(228, 235, 234);
+                border-radius: 50%;
+                font-size: 20px;
+                color: rgb(222, 249, 85);
+                margin: 0 8px;
+                transition: .5s;
+            }
+            
+            .home-info .btn-sci .sci a:hover {
+                background: rgb(183, 231, 183);
+                color: black;
+                box-shadow: 0 0 10px;
+            }
+            /*
+.box-img img {
+    position: relative;
+    width: 290px;
+    box-shadow: 0 0 1rem rgb(233, 241, 6), inset 0 0 3rem rgb(212, 244, 9), 0 0 4rem rgb(246, 254, 6), inset 0 0 4rem rgb(206, 255, 11), 0 0 2rem rgb(5, 240, 248), 0 0 2rem rgb(218, 250, 9);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1% 9% red;
+    gap: 8rem;
+    margin-left: 30%;
+} */
+            
+            @keyframes float-image {
+                0% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: -2.4rem;
+                }
+                100% {
+                    transform: translateY(0);
+                }
+            }
+            /* start about me ...................................................................................................*/
+            
+            .about {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                background: black;
+                margin-top: -10px;
+            }
+            /* Styling for About Image */
+            
+            .about-img img {
+                position: relative;
+                width: 70%;
+                box-shadow: 0 0 1rem rgb(251, 247, 53), inset 0 0 3rem white, 0 0 4rem rgb(249, 246, 36), inset 0 0 4rem black, 0 0 2rem rgb(255, 244, 39), 0 0 2rem rgb(25, 23, 23);
+                border-radius: 50%;
+                padding: 1% 9% red;
+                gap: 8rem;
+            }
+            /* About Content Title */
+            
+            .about-content h2 {
+                text-align: left;
+                color: rgb(238, 224, 224);
+                font-size: 30px;
+                font-family: "Poppins", serif;
+            }
+            /* About Content Paragraph */
+            
+            .about-content p {
+                font-size: 20px;
+                color: white;
+                font-family: "Poppins", serif;
+                margin: 2rem 0 3rem;
+            }
+            /* Highlight Span */
+            
+            .about-content span {
+                color: rgb(37, 228, 215);
+                font-family: "Poppins", serif;
+            }
+            /* About Heading (typing effect) */
+            
+            .about-content h1 {
+                font-size: 30px;
+                color: rgb(23, 245, 245);
+                font-family: "Poppins", serif;
+                overflow: hidden;
+                white-space: nowrap;
+                border-right: 1px solid rgb(23, 245, 245);
+                width: 0;
+                animation: typing 5s steps(20) infinite, blink-caret 0.65s step-end infinite;
+            }
+            /* Typing Animation Effect */
+            
+            @keyframes typing {
+                0% {
+                    width: 0;
+                }
+                100% {
+                    width: 100%;
+                }
+            }
+            /* Cursor Blinking Effect */
+            
+            @keyframes blink-caret {
+                0%,
+                50%,
+                100% {
+                    border-color: transparent;
+                }
+                25%,
+                75% {
+                    border-color: rgb(23, 245, 245);
+                }
+            }
+            /* Button Styling */
+            
+            .dtn {
+                display: inline-block;
+                padding: 10px 30px;
+                background: rgb(3, 238, 251);
+                border: 2px solid rgb(17, 248, 248);
+                border-radius: 30px;
+                box-shadow: 0 0 10px rgb(247, 245, 244);
+                font-size: 16px;
+                color: black;
+                font-weight: 600;
+                padding: 0.5rem;
+            }
+            
+            .dtn:hover {
+                background: transparent;
+                color: green;
+            }
+            /* Mobile Responsiveness */
+            
+            @media (max-width: 768px) {
+                /* About Section */
+                .about {
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 5% 10%;
+                    gap: 2rem;
+                }
+                /* About Image */
+                .about-img img {
+                    width: 250px;
+                    /* Adjust image size for mobile */
+                    box-shadow: 0 0 0.8rem rgb(251, 247, 53), inset 0 0 2rem white, 0 0 3rem rgb(249, 246, 36), inset 0 0 3rem black, 0 0 1rem rgb(255, 244, 39), 0 0 1rem rgb(25, 23, 23);
+                }
+                /* About Content */
+                .about-content {
+                    text-align: center;
+                    padding-left: 0;
+                }
+                .about-content h2 {
+                    font-size: 24px;
+                }
+                .about-content p {
+                    font-size: 18px;
+                    margin: 1.5rem 0 2rem;
+                }
+                .about-content h1 {
+                    font-size: 25px;
+                }
+                /* Button */
+                .dtn {
+                    font-size: 14px;
+                }
+            }
+            /* Extra Mobile Responsiveness for Smaller Screens */
+            
+            @media (max-width: 480px) {
+                /* About Section */
+                .about {
+                    padding: 5% 5%;
+                }
+                /* About Image */
+                .about-img img {
+                    width: 220px;
+                    /* Further reduce image size */
+                }
+                /* About Content */
+                .about-content h2 {
+                    font-size: 20px;
+                }
+                .about-content p {
+                    font-size: 16px;
+                    top: -50px;
+                }
+                .about-content h1 {
+                    font-size: 22px;
+                    top: -200px auto;
+                }
+                .dtn {
+                    font-size: 12px;
+                }
+            }
+            /* Professional CSS for Services Section....................................................................................... */
+            /* General Styles */
+            
+            body {
+                margin: 0;
+                font-family: 'Arial', sans-serif;
+                background: #000;
+                /* Black background */
+                color: #fff;
+                /* White text for better contrast */
+            }
+            
+            .services {
+                background: #000;
+                /* Black background for the services section */
+                padding: 60px 30px;
+                font-family: 'Poppins', serif;
+                color: #4bf91b;
+                /* White text */
+            }
+            
+            .services .heading {
+                text-align: center;
+                font-size: 2.5rem;
+                color: #f5f7fa;
+                font-weight: 500;
+                margin-bottom: 50px;
+                animation: fadeIn 1s ease-in-out;
+            }
+            
+            .services .heading span {
+                color: #1ff40c;
+            }
+            
+            .services-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 25px;
+            }
+            /* Service Box Styles */
+            
+            .service-box {
+                background: #111;
+                /* Slightly lighter black for contrast */
+                border-radius: 10px;
+                box-shadow: 0 8px 15px rgb(24, 235, 210);
+                width: 320px;
+                max-width: 100%;
+                /* Ensures full width on smaller screens */
+                padding: 30px;
+                text-align: center;
+                margin: 15px auto;
+                /* Center boxes and add spacing */
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                animation: slideIn 1s ease-in-out;
+            }
+            
+            .service-box:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            }
+            
+            .service-box .icon {
+                font-size: 4rem;
+                color: #1ff40c;
+                /* Bright green for icons */
+                margin-bottom: 20px;
+            }
+            
+            .service-box h3 h4 h5 {
+                font-size: 1.8rem;
+                color: #1ff40c;
+                margin: 15px 0;
+                font-weight: 500;
+            }
+            
+            .service-box p {
+                font-size: 1rem;
+                color: #ccc;
+                /* Light gray text for descriptions */
+                margin-bottom: 20px;
+                line-height: 1.6;
+            }
+            
+            .service-box .btn {
+                display: inline-block;
+                padding: 10px 30px;
+                background: #1ff40c;
+                /* Bright green button */
+                border-radius: 30px;
+                color: #000;
+                /* Black text on button */
+                font-size: 16px;
+                font-weight: bold;
+                text-decoration: none;
+                transition: background 0.3s ease, color 0.3s ease;
+            }
+            
+            .service-box .btn:hover {
+                background: #fff;
+                /* White background on hover */
+                color: #000;
+            }
+            /* Animations */
+            
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            
+            @keyframes slideIn {
+                from {
+                    opacity: 0;
+                    transform: translateX(-50px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+            /* Responsive Design */
+            
+            @media (max-width: 768px) {
+                .services-container {
+                    flex-direction: column;
+                    /* Stack boxes vertically */
+                    align-items: center;
+                }
+                .service-box {
+                    width: 90%;
+                    /* Full width for mobile view */
+                    margin: 20px 0;
+                    /* Add vertical spacing between boxes */
+                }
+                .services .heading {
+                    font-size: 2rem;
+                }
+                .service-box h3 {
+                    font-size: 1.5rem;
+                }
+                .service-box p {
+                    font-size: 0.9rem;
+                }
+                .service-box .btn {
+                    padding: 8px 20px;
+                    font-size: 14px;
+                }
+            }
+            
+            @media (max-width: 480px) {
+                .services .heading {
+                    font-size: 1.5rem;
+                    margin-bottom: 30px;
+                }
+                .service-box {
+                    padding: 20px;
+                    margin: 20px auto;
+                    /* Center and separate boxes */
+                }
+                .service-box h3 {
+                    font-size: 1.3rem;
+                }
+                .service-box p {
+                    font-size: 0.8rem;
+                }
+                .service-box .btn {
+                    padding: 6px 15px;
+                    font-size: 12px;
+                }
+            }
+            /* skill bars........................................................................................... */
+            /* Skills Section */
+            /* Skills Container Styling */
+            
+            .skills-container {
+                width: 100%;
+                max-width: 800px;
+                background: black;
+                border-radius: 8px;
+                box-shadow: 0 2px 10px rgb(242, 252, 42);
+                padding: 30px;
+                margin: 20px auto;
+                /* Center container on the page */
+                text-align: center;
+                box-sizing: border-box;
+                overflow: hidden;
+                /* Ensure content stays within the border */
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                font-family: 'Arial', sans-serif;
+            }
+            /* Skills Title Styling */
+            
+            .skills-title {
+                font-size: 24px;
+                color: #fcf4f4;
+                margin-bottom: 20px;
+                font-weight: 600;
+            }
+            
+            .skill {
+                margin-bottom: 20px;
+                text-align: left;
+                padding: 0 10px;
+            }
+            /* Skill Header */
+            
+            .skill-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+            /* Skill Name */
+            
+            .skill-name {
+                font-size: 16px;
+                color: #eef3ec;
+                font-weight: 600;
+                font-family: "Poppins", serif;
+            }
+            /* Skill Percentage */
+            
+            .skill-percentage {
+                font-size: 14px;
+                color: #f4eeee;
+                font-weight: 500;
+                font-family: "Poppins", serif;
+            }
+            /* Skill Bar Container */
+            
+            .skill-bar {
+                background-color: #0e0d0d;
+                border-radius: 20px;
+                height: 12px;
+                margin-bottom: 10px;
+                overflow: hidden;
+            }
+            /* Skill Progress */
+            
+            .skill-progress {
+                background-color: #daf447;
+                height: 100%;
+                border-radius: 20px;
+                transition: width 0.5s ease-in-out;
+            }
+            /* Circular Skills */
+            
+            .circle-skill {
+                position: relative;
+                display: inline-block;
+                margin-top: 10px;
+            }
+            
+            .circle-percentage {
+                position: absolute;
+                top: 30%;
+                left: 30%;
+                font-size: 16px;
+                font-weight: bold;
+                color: #fef9f9;
+                z-index: 1;
+                font-family: "Poppins", serif;
+            }
+            /* Circular Skills Container */
+            
+            .circle-skill .circle-percentage {
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 1.2rem;
+                font-weight: bold;
+                color: #fff;
+            }
+            /* Animation for the progress circle */
+            
+            .circle-skill circle:nth-child(2) {
+                stroke-dasharray: 339.292;
+                stroke-dashoffset: 339.292;
+                animation: progress 2s ease-out forwards;
+            }
+            
+            @keyframes progress {
+                from {
+                    stroke-dashoffset: 339.292;
+                    /* Start with the full circle hidden */
+                }
+                to {
+                    stroke-dashoffset: calc(339.292 - (339.292 * var(--percentage)));
+                    /* Show the appropriate percentage */
+                }
+            }
+            /* Responsive Design */
+            
+            @media (max-width: 768px) {
+                .circle-skills-container {
+                    gap: 15px;
+                    padding: 20px;
+                }
+                .skill {
+                    width: 120px;
+                }
+            }
+            
+            .circle-skills-container {
+                display: flex;
+                justify-content: center;
+                gap: 30px;
+                margin-top: 50px;
+            }
+            /* Responsive Design for Mobile Devices */
+            
+            @media (max-width: 768px) {
+                .skills-container {
+                    padding: 20px;
+                    margin: 10px auto;
+                }
+                .skills-title {
+                    font-size: 20px;
+                    margin-bottom: 15px;
+                }
+                .skill {
+                    margin-bottom: 15px;
+                    padding: 0 5px;
+                    /* Adjust padding for smaller screens */
+                }
+                .skill-name {
+                    font-size: 14px;
+                }
+                .skill-percentage {
+                    font-size: 12px;
+                }
+                .skill-bar {
+                    height: 10px;
+                }
+                .circle-skills-container {
+                    flex-direction: column;
+                    gap: 20px;
+                }
+                .circle-skill {
+                    width: 60px;
+                    height: 60px;
+                }
+                .circle-percentage {
+                    font-size: 14px;
+                    top: 25%;
+                    left: 25%;
+                }
+            }
+            
+            @media (max-width: 480px) {
+                .skills-container {
+                    padding: 15px;
+                }
+                .skills-title {
+                    font-size: 18px;
+                }
+                .skill-name {
+                    font-size: 12px;
+                }
+                .skill-percentage {
+                    font-size: 10px;
+                }
+                .circle-skill {
+                    width: 50px;
+                    height: 50px;
+                }
+                .circle-percentage {
+                    font-size: 12px;
+                    top: 20%;
+                    left: 20%;
+                }
+            }
+            
+            @keyframes fillBar {
+                from {
+                    width: 0;
+                }
+                to {
+                    width: var(--width);
+                }
+            }
+            
+            @keyframes dashOffset {
+                from {
+                    stroke-dashoffset: 282.74;
+                }
+                to {
+                    stroke-dashoffset: calc(282.74 * (1 - 0.9));
+                }
+            }
+            /* Responsive Design */
+            /*Contact Section .............................................................................................*/
+            /* General Section Styling */
+            
+            body {
+                font-family: 'Arial', sans-serif;
+            }
+            /* General Styling */
+            /* Section Container */
+            
+            .section-container {
+                padding: 50px 20px;
+                text-align: center;
+                border-radius: 10px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+                margin: 30px auto;
+                max-width: 900px;
+                animation: fadeIn 1s ease-in-out;
+            }
+            /* Heading and Text */
+            
+            .main-text {
+                font-size: 1rem;
+                color: #ffae00;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+                animation: slideInFromLeft 0.8s ease;
+            }
+            
+            h2 {
+                font-size: 2.5rem;
+                color: #39ff14;
+                margin-bottom: 20px;
+                font-weight: 700;
+                animation: slideInFromRight 0.8s ease;
+            }
+            
+            .section-container p {
+                font-size: 1.1rem;
+                color: #c1c1c1;
+                margin-bottom: 30px;
+                line-height: 1.6;
+                animation: fadeInUp 0.8s ease-in-out;
+            }
+            /* Form Styling */
+            
+            form {
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 20px;
+                border-radius: 8px;
+                background-color: black;
+                box-shadow: 0 4px 15px rgb(70, 245, 228);
+                animation: popIn 0.8s ease;
+            }
+            /* Input Fields */
+            
+            .form-control {
+                width: 100%;
+                padding: 12px 15px;
+                margin-bottom: 20px;
+                border: 1px solid #e3f1b0;
+                border-radius: 6px;
+                background-color: #161b22;
+                color: #f3eeee;
+                font-size: 1rem;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            
+            .form-control::placeholder {
+                color: #888888;
+            }
+            
+            .form-control:focus {
+                border-color: #39ff14;
+                outline: none;
+                box-shadow: 0 0 8px #3bfcaf;
+                transform: scale(1.05);
+            }
+            
+            textarea {
+                resize: none;
+            }
+            
+            .etn {
+                background-color: #39ff14;
+                color: #0d1117;
+                padding: 12px 0px;
+                font-size: 1rem;
+                font-weight: 600;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: background-color 0.3s ease, transform 0.3s ease;
+                display: inline-block;
+                width: 40%;
+            }
+            
+            .etn:hover {
+                background-color: #2be912;
+                transform: translateY(-3px) scale(1.05);
+            }
+            /* Animations */
+            
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+            
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            
+            @keyframes slideInFromLeft {
+                from {
+                    opacity: 0;
+                    transform: translateX(-50px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+            
+            @keyframes slideInFromRight {
+                from {
+                    opacity: 0;
+                    transform: translateX(50px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+            
+            @keyframes popIn {
+                from {
+                    transform: scale(0.8);
+                    opacity: 0;
+                }
+                to {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+            /* Responsive Design */
+            
+            @media (max-width: 768px) {
+                .section-container {
+                    padding: 30px 15px;
+                }
+                h2 {
+                    font-size: 2rem;
+                }
+                .main-text {
+                    font-size: 0.9rem;
+                }
+                .section-container p {
+                    font-size: 0.95rem;
+                }
+                form {
+                    padding: 15px;
+                }
+                .btn {
+                    font-size: 0.9rem;
+                }
+            }
+            /*-----------------our connect details mention----------------------------------------------------------*/
+            /* Contact Section Styles */
+            /* General Styling */
+            /* General Styles */
+            /* Slider Container------------------------------------------------------------------------------------------- */
+            /* Global Styles */
+            /* Global Styles */
+            /* Main Content */
+            /* Global Styles */
+            /* Base Styles */
+            /* Slider Section */
+            
+            .header {
+                text-align: center;
+                padding: 10px;
+                color: white;
+            }
+            
+            .slideshow-container {
+                position: relative;
+                max-width: 500px;
+                margin: 20px auto;
+                overflow: hidden;
+                border-radius: 80px;
+                box-shadow: 0 rgb(202, 239, 16);
+                gap: 10PX;
+            }
+            
+            .slides {
+                display: none;
+                width: 100%;
+                animation: fade 1.5s ease-in-out;
+            }
+            
+            .slides img {
+                width: 100%;
+                height: auto;
+            }
+            
+            @keyframes fade {
+                from {
+                    opacity: 0.4;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+            
+            .dots {
+                text-align: center;
+                margin-top: 10px;
+            }
+            
+            .dot {
+                height: 12px;
+                width: 12px;
+                margin: 0 4px;
+                background-color: #fcf94c;
+                border-radius: 50%;
+                display: inline-block;
+                cursor: pointer;
+                transition: background-color 0.6s ease;
+            }
+            
+            .dot.active {
+                background-color: #717171;
+            }
+            
+            .icon-container {
+                margin: 20px;
+                text-align: center;
+            }
+            
+            .icon {
+                font-size: 40px;
+                color: #333;
+                cursor: pointer;
+                transition: transform 0.3s, color 0.3s;
+            }
+            
+            .icon:hover {
+                color: #181919;
+                transform: scale(1.2);
+            }
+            
+            footer {
+                text-align: center;
+                padding: 10px;
+                background-color: #333;
+                color: white;
+                max-width: 1900px;
+                font-family: Arial, sans-serif;
+            }
